@@ -1,0 +1,4 @@
+getHumanChoice
+    PROMPT for choice
+    parse choice to be all lowercase
+    return parsed choice

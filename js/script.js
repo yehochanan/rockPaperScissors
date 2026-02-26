@@ -14,4 +14,15 @@ function getComputerChoice(){
     }
 }
 
+function getHumanChoice(){
+    // PROMPT for choice
+    let player_choice = prompt("Please enter rock, paper, or Scissors:");
+    console.log(player_choice);
+    // parse choice to be all lowercase
+    let choice = player_choice.toLowerCase();
+    // return parsed choice
+    console.log(choice);
+}
+
 getComputerChoice();
+getHumanChoice();
