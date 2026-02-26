@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice(){
 
     // randomNumber = Random number between 1 and 3
@@ -16,8 +19,8 @@ function getComputerChoice(){
 
 function getHumanChoice(){
     // PROMPT for choice
-    let player_choice = prompt("Please enter rock, paper, or Scissors:");
-    console.log(player_choice);
+    let player_choice = prompt("Please enter rock, paper, or scissors:");
+    // console.log(player_choice);
     // parse choice to be all lowercase
     let choice = player_choice.toLowerCase();
     // return parsed choice
