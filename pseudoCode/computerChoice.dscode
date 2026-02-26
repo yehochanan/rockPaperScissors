@@ -1,0 +1,13 @@
+getComputerChoice
+    randomNumber = Random number between 1 and 3
+
+    IF randomNumber = 1
+        PRINT Rock
+    ELSE IF randomNumber = 2
+        PRINT Paper
+    ELSE 
+        PRINT Scissors
+    END IF
+
+        
+    
