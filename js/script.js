@@ -1,7 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
-
 // Get computer choice
 
 function getComputerChoice(){
@@ -35,76 +31,110 @@ function getHumanChoice(){
     return choice;
 }
 
-// win - loose text
-function winText(){
-    console.log("Congrats! You won");
-}
-
-function looseText(){
-    console.log("Better luck next time");
-}
-
-function tieText(){
-    console.log("A draw, too bad")
-}
-
-// single round of rps
-
-function playRound(HumanChoice, ComputerChoice){
-    // Testing function
-    console.log("Player chose: " + HumanChoice);
-    console.log("Computer chose: " + ComputerChoice);
-
+// main function
+function playGame() {
     // variables
-    let computerWins = false;
-    let playerWins = false;
+    let humanScore = 0;
+    let computerScore = 0;
 
-    // Game mechanics for rps
-    if (HumanChoice === "rock" && ComputerChoice === "paper") {
-        looseText();
-        // return computerWins = true;
-        return computerScore++;
-    } else if (HumanChoice === "rock" && ComputerChoice === "scissors") {
-        winText();
-        // return playerWins = true;
-        return humanScore++;
-    } else if (HumanChoice === "paper" && ComputerChoice === "rock") {
-        winText();
-        // return playerWins = true;
-        return humanScore++;
-    } else if (HumanChoice === "paper" && ComputerChoice === "scissors") {
-        looseText();
-        // return computerWins = true;
-        return computerScore++;
-    } else if (HumanChoice === "scissors" && ComputerChoice === "rock") {
-        looseText();
-        // return computerWins = true;
-        computerScore++;
-    } else if (HumanChoice === "scissors" && ComputerChoice === "paper") {
-        winText();
-        // return playerWins = true;
-        return humanScore++;
-    } else {
-        tieText();
+    // win - loose text
+    function winText(){
+        console.log("Congrats! You won");
     }
+
+    function loseText(){
+        console.log("Better luck next time");
+    }
+
+    function tieText(){
+        console.log("A draw, too bad")
+    }
+
+    // single round of rps
+
+    function playRound(HumanChoice, ComputerChoice){
+       
+
+        // Game mechanics for rps
+        if (HumanChoice === "rock" && ComputerChoice === "paper") {
+            loseText();
+            return computerScore++;
+        } else if (HumanChoice === "rock" && ComputerChoice === "scissors") {
+            winText();
+            return humanScore++;
+        } else if (HumanChoice === "paper" && ComputerChoice === "rock") {
+            winText();
+            return humanScore++;
+        } else if (HumanChoice === "paper" && ComputerChoice === "scissors") {
+            loseText();
+            return computerScore++;
+        } else if (HumanChoice === "scissors" && ComputerChoice === "rock") {
+            loseText();
+            computerScore++;
+        } else if (HumanChoice === "scissors" && ComputerChoice === "paper") {
+            winText();
+            return humanScore++;
+        } else {
+            tieText();
+        }
+        
+    } 
+
     
-    // if (computerWins === true) {
-    //     computerScore++;
-    // } else if (playerWins === true) {
-    //     humanScore++;
-    // } else {
-    //     // do nothing
-    // }
-} 
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    const humanSelection2 = getHumanChoice();
+    const computerSelection2 = getComputerChoice();
+
+    const humanSelection3 = getHumanChoice();
+    const computerSelection3 = getComputerChoice();
+
+    const humanSelection4 = getHumanChoice();
+    const computerSelection4 = getComputerChoice();
+
+    const humanSelection5 = getHumanChoice();
+    const computerSelection5 = getComputerChoice();
 
 
+    
+    // round 1
+    playRound(humanSelection,computerSelection);
 
-// getComputerChoice();
-// getHumanChoice();
-playRound(humanSelection,computerSelection);
+    console.log("The Computers current score is: " + computerScore);
+    console.log("The players current score is: " + humanScore);
+    
 
-console.log("The Computers current score is: " + computerScore);
-console.log("The players current score is: " + humanScore);
+    // round 2
+    
+    playRound(humanSelection2,computerSelection2);
+
+    console.log("The Computers current score is: " + computerScore);
+    console.log("The players current score is: " + humanScore);
+    
+    // round 3
+    
+    playRound(humanSelection3,computerSelection3);
+
+    console.log("The Computers current score is: " + computerScore);
+    console.log("The players current score is: " + humanScore);
+    
+    // round 4
+    
+    playRound(humanSelection4,computerSelection4);
+
+    console.log("The Computers current score is: " + computerScore);
+    console.log("The players current score is: " + humanScore);
+
+    // round 5
+    
+    playRound(humanSelection5,computerSelection5);
+
+    console.log("The Computers current score is: " + computerScore);
+    console.log("The players current score is: " + humanScore);
+
+
+}
+
+playGame();
