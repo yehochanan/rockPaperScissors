@@ -1,0 +1,42 @@
+playRound (getHumanChoice, getComputerChoice)
+
+    computerWins = false
+    playerWins = false
+    IF getHumanChoice == rock and getComputerChoice == paper
+        computerWins = true
+        PRINT "Better luck next time"
+    ELSE IF
+        getHumanChoice == rock and getComputerChoice == scissors
+         playerWins = true
+         PRINT "Congrats! You won"
+    ELSE IF
+        getHumanChoice == paper and getComputerChoice == rock
+         playerWins = true
+         PRINT "Congrats! You won"
+    ELSE IF
+        getHumanChoice == paper and getComputerChoice == scissors
+         computerWins = true
+         PRINT "Better luck next time"
+    ELSE IF
+        getHumanChoice == scissors and getComputerChoice == rock
+         computerWins = true
+         PRINT "Better luck next time"
+    ELSE IF
+        getHumanChoice == scissors and getComputerChoice == paper
+         playerWins = true
+         PRINT "Congrats! You won"
+    ELSE IF
+        getHumanChoice == rock and getComputerChoice == rock
+        PRINT "A draw, too bad"
+    ELSE IF
+        getHumanChoice == paper and getComputerChoice == paper
+        PRINT "A draw, too bad"
+    ELSE
+        getHumanChoice == scissors and getComputerChoice == scissors
+        PRINT "A draw, too bad"
+    
+    IF computerWins = true
+        computerScore = computerScore + 1
+    ELSE IF
+        playerWins = true
+         humanScore = humanScore + 1
